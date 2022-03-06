@@ -1,0 +1,84 @@
+#include <iostream> 
+
+
+    int a, b;
+
+    //operator
+    void Multiply()
+    {
+        std::cout << (a * b);
+    }
+    void Divide()
+    {
+        std::cout << (a / b);
+    }
+    void Add()
+    {
+        std::cout << (a + b);
+    }
+    void Subtract()
+    {
+        std::cout << (a - b);
+    }
+    void Modulus()
+    {
+        std::cout << (a % b);
+    }
+
+int main(){
+
+    int Operator{};
+
+    std::cout << "Enter a number" << std::endl;
+    std::cin >> a;
+
+    std::cout << "Enter another number" << std::endl;
+    std::cin >> b;
+
+    std::cout << "Select an Operator" << std::endl;
+    std::cout << "1: Multiply" << std::endl;
+    std::cout << "2: Divide" << std::endl;
+    std::cout << "3: Add" << std::endl;
+    std::cout << "4: Subtract" << std::endl;
+    std::cout << "5: Modulus" << std::endl;
+    std::cin >> Operator;
+    
+
+
+    switch (Operator)
+    {
+        case 1 : {
+            Multiply();
+        }
+        break;
+
+        case 2 : {
+            Divide();
+        }
+        break;
+
+        case 3 : {
+            Add();
+        break;
+        }
+
+        case 4 : {
+            Subtract();
+        break;
+        }
+
+        case 5 : {
+            Modulus();
+        break;
+        }
+
+        default: {
+            std::cout << "Selection invalid" << std::endl;
+        }
+
+        break;
+ 
+    }
+
+    return 0;
+}
